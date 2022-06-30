@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(17, 17, 17);
+}
+
+nav{
+    width: 100%;
+    height: 10vh;
+    /*background-color: #2a2a2a;*/
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+nav div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+nav .part-izquierda, nav .part-izquierda a{
+    
+    margin-left: 30px;
+    transition: .5s;
+}
+
+nav .part-izquierda a:hover{
+    cursor: pointer;
+    color: rgb(206, 206, 206);
+}
+
+nav .part-derecha, nav .part-derecha div{
+    margin-right: 30px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+nav .user{
+    width: 30px;
+    height: 30px;
+    background-color: #ce1616;
+    border-radius: 3px;
+}
+
+header .nav-falso{
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    z-index: 8;
+    width: 100%;
+    height: 10vh;
+}
+
+
+/*Banner*/
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url(../images/peaky-blinders-banner.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner .info-banner{
+    width: 45%;
+    height: 40vh;
+
+    /*margin-top: 40vh;*/
+    padding-left: 3%;
+
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.banner .img-title{
+
+    margin-left: 3%;
+    margin-top: 150px;
+    margin-bottom: 110px;
+}
+
+.banner .info-banner .top-position{
+
+    width: 48%;
+    height: 4vh;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.banner .info-banner .top-position span{
+
+    font-size: 20px;
+    margin-left: 15px;
+    color: rgb(206, 206, 206);
+}
+
+.banner .info-banner .info-contenido{
+
+    width: 90%;
+    height: 20vh;
+    margin-top: 2vh;
+
+    font-size: 20px;
+}
+
+.banner .info-banner .info-contenido p{
+    color: rgb(206, 206, 206);
+}
+
+.banner .info-banner .contenido-btns{
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner .info-banner .contenido-btns div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 230px;
+    height: 55px;
+
+    background-color: blanchedalmond;
+    margin-top: 30px;
+    margin-left: 6%;
+
+    border-radius: 7px;
+}
+
+.banner .info-banner .contenido-btns div p{
+    margin-left: 10px;
+}
+
+.banner .info-banner .contenido-btns .more-info{
+    
+    background-color: rgba(105, 105, 105, .6);
+    color: blanchedalmond;
+}
+
+
+.fin-banner{
+    background: linear-gradient(to top, rgba(17, 17, 17, 1), rgba(8, 8, 8, 1), rgba(0, 0, 0, 0));
+    width: 100%;
+    height: 160px;
+    margin-top: 300px;
+}
+/* FIN DEL BANNER*/
+
+/* INICIO DEL CONTENIDO */
+.content{
+    width: 100%;
+    height: 50vh;
+    background: rgb(17, 17, 17);
+}
+
+.banner .info-banner .contenido-btns .ver-contenido:hover{
+    cursor:pointer;
+    background-color: rgba(255, 235, 205, .75);
+}
+
+.banner .info-banner .contenido-btns .more-info:hover{
+    cursor: pointer;
+    background-color: rgba(105, 105, 105, .35);
+}
+
+
+/*contenido por individual*/
+
+.content .populares-peliculas, .content .series{
+    height: 200px;
+    width: 100%;
+
+    margin-bottom: 80px;
+}
+
+.fila{
+    width: 100%;
+    height: 200px;
+
+    display: flex;
+}
+
+.fila .fila-content{
+    width: 98%;
+    margin-left: 2%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.fila .fila-content .card{
+
+    background-color: #2a2a2a;
+    width: 14%;
+    height: 130px;
+    transition: .65s;
+
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.fila .fila-content .card:hover{
+
+    cursor: pointer;
+    transform: scale(1.7);
+    width: 18%;
+    height: 240px;
+    z-index: 3;
+}
+
+.fila .fila-content .card .img-card{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: rgb(53, 136, 161);
+    width: 100%;
+    height: 100%;
+}
+
+.fila .fila-content .card .content-card{
+    width: 100%;
+    height: 85%;
+    background-color: #2a2a2a;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Botones de cada card */
+.fila .fila-content .card .content-card .btns-card{
+    width: 100%;
+    height: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fila .fila-content .card .content-card .btns-card .btns-left{
+
+    background-color: aquamarine;
+    width: 70%;
+    height: 80%;
+    display: flex;
+    justify-content:space-around;
+}
+
+.fila .fila-content .card .content-card .btns-card .more-info{
+
+    background-color: aquamarine;
+    width: 30%;
+    height: 80%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fila .fila-content .card .content-card .btns-card .btns-left div, .fila .fila-content .card .content-card .btns-card .more-info div{
+
+    background-color: rgb(52, 52, 52);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgb(160, 160, 160);
+    margin-top: 6px;
+}
+
+.fila .fila-content .card .content-card .btns-card .btns-left div:hover, .fila .fila-content .card .content-card .btns-card .more-info div:hover{
+
+    background-color: rgb(72, 72, 72);
+    border: 1px solid rgb(180, 180, 180);
+}
+
+.fila .fila-content .card .content-card .btns-card .more-info div{
+
+    margin-left: 0px;
+    margin-right: 6px;
+}
